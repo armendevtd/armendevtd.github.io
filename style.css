@@ -1,12 +1,12 @@
 :root {
-  --bg: #f7f3ea;
-  --bg-soft: #efe9dc;
-  --fg: #1a1612;
-  --muted: #76706a;
-  --rule: #d8d1c0;
-  --accent: #8a3324;
-  --link: #1a1612;
-  --link-hover: #8a3324;
+  --bg: #ffffff;
+  --bg-soft: #f5f5f4;
+  --fg: #141414;
+  --muted: #6b6b6b;
+  --rule: #e3e3e0;
+  --accent: #1f3a5f;
+  --link: #141414;
+  --link-hover: #1f3a5f;
   --serif: "Newsreader", "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
   --sans: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -14,14 +14,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #13110f;
-    --bg-soft: #1a1815;
-    --fg: #ede6d6;
-    --muted: #8d867a;
-    --rule: #2a2622;
-    --accent: #d4a574;
-    --link: #ede6d6;
-    --link-hover: #d4a574;
+    --bg: #111214;
+    --bg-soft: #191b1e;
+    --fg: #ececec;
+    --muted: #8f8f8f;
+    --rule: #2a2c30;
+    --accent: #8fb4e3;
+    --link: #ececec;
+    --link-hover: #8fb4e3;
   }
 }
 
@@ -96,45 +96,12 @@ a:focus-visible {
   line-height: 1.5;
   color: var(--fg);
   max-width: 56ch;
-  margin: 0 0 2.5rem;
+  margin: 0 0 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
   text-wrap: pretty;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  margin: 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-.stats > div {
-  padding: 1.1rem 1.25rem 1.1rem 0;
-  border-right: 1px solid var(--rule);
-  margin-right: 1.25rem;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 0.15rem;
-}
-.stats > div:last-child { border-right: none; margin-right: 0; }
-.stats dd {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 2.25rem;
-  line-height: 1;
-  font-weight: 500;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent);
-}
-.stats dt {
-  margin: 0;
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  line-height: 1.35;
-}
 
 /* ---------- Section labels ---------- */
 .section-label {
@@ -368,9 +335,6 @@ footer {
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
   .cards { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .stats > div:nth-child(2) { border-right: none; margin-right: 0; }
-  .stats > div:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
 }
 
 @media (max-width: 540px) {
